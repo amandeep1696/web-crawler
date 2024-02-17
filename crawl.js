@@ -20,12 +20,7 @@ async function crawlPage(baseURL, currentURL, pages) {
 
   // initialize this page in the map
   // since it doesn't exist yet
-  if (currentURL === baseURL) {
-    // don't count the base URL as a link to itself
-    pages[normalizedURL] = 0;
-  } else {
-    pages[normalizedURL] = 1;
-  }
+  pages[normalizedURL] = 1;
 
   // fetch and parse the html of the currentURL
   console.log(`crawling ${currentURL}`);
